@@ -34,6 +34,9 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "nvchad.autocmds"
 
+
 vim.schedule(function()
   require "mappings"
 end)
+vim.o.mouse = "a"
+vim.cmd("highlight Visual guibg=#FFFF00 guifg=#000000")

@@ -22,3 +22,18 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+-- Automatically format on save
+-- vim.api.nvim_create_autocmd({"BufWritePre"}, {
+--     callback = function()
+--             vim.lsp.buf.format({ async = false })
+--                 end,
+--                 })
+--
+
+
+-- Automatically format on save
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+     callback = function()
+           vim.lsp.buf.format({ async = false })
+                 end,
+                 })
